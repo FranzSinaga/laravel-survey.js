@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Resources\SurveyCollection;
 use App\Survey;
+use App\Answer;
 
 class SurveyController extends Controller
 {
@@ -24,6 +25,18 @@ class SurveyController extends Controller
 //        $post = Survey::find($id);
         $data = Survey::where('survey_id', $id)->firstOrFail();
         return response()->json($data);
+    }
+
+    public function getAnswer($id){
+        $user = Answer::where('survey_id', $id)->get() ;
+//        return response()->json($user);
+        return new SurveyCollection($user);
+    }
+
+    public function getAnswerById($id){
+        $user = Answer::where('id', $id)->first() ;
+        return response()->json($user);
+//        return new SurveyCollection($user);
     }
 
     public function update($id, Request $request){

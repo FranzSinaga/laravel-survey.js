@@ -26,3 +26,9 @@ Route::post('/survey/update/{id}', 'SurveyController@update');
 // ================SurveyCreateAPI================ //
 Route::post('/survey/createSurvey', 'SurveyCreateController@store');
 Route::get('/survey', 'SurveyCreateController@index');
+
+// ================SurveyAnswerAPI================ //
+Route::post('/survey/answer/{id}', 'AnswerController@save');
+Route::get('/survey/detail-answer/{id}', 'SurveyController@getAnswer');
+Route::get('/survey/show-answer/{id}', 'SurveyController@getAnswerById');
+

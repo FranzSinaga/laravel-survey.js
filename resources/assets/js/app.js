@@ -15,6 +15,8 @@ Vue.use(VueAxios,axios);
 import HomeComponent from './components/HomeComponent.vue';
 import CreateComponent from './components/CreateComponent.vue';
 import AnswerComponent from './components/AnswerComponent.vue';
+import DetailAnswer from './components/DetailAnswer.vue';
+import ShowAnswer from './components/ShowAnswer.vue';
 
 const routes = [
     {
@@ -29,8 +31,18 @@ const routes = [
     },
     {
         name: 'answer',
-        path: '/survey/answer',
+        path: '/survey/answer/:id',
         component: AnswerComponent
+    },
+    {
+        name: 'detailAnswer',
+        path: '/survey/detail-answer/:id',
+        component: DetailAnswer
+    },
+    {
+        name: 'showAnswer',
+        path: '/survey/show-answer/:id',
+        component: ShowAnswer
     },
 ];
 

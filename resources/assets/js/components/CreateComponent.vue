@@ -60,7 +60,6 @@
             let urlPut = `${this.$route.params.id}`;
             console.log('http://localhost:8000/api/survey/update/'+urlPut)
             this.surveyCreator.saveSurveyFunc = function (saveNo, callback) {
-
                 $.ajax({
                     url: 'http://localhost:8000/api/survey/update/'+urlPut,
                     type: "POST",

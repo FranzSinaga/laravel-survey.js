@@ -20,10 +20,12 @@
                         </thead>
                         <tbody>
                             <tr v-for="post in posts" :key="post.id">
-                                <td>{{post.id}}</td>
                                 <td>{{ post.name }}</td>
                                 <td>
+                                    
                                     <router-link :to="{name: 'create', params: {id: post.id}}" class="btn btn-sm btn-primary">Edit</router-link>
+                                    <router-link :to="{name: 'answer', params: {id: post.id}}" class="btn btn-sm btn-secondary">Test</router-link>
+                                    <router-link :to="{name: 'detailAnswer', params: {id: post.id}}" class="btn btn-sm btn-secondary">See Answer</router-link>
                                     <button class="btn btn-sm btn-danger">Delete</button>
                                 </td>
                             </tr>

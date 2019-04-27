@@ -78,5 +78,6 @@
             @yield('content')
         </main>
     </div>
+    {{--<script src="https://surveyjs.azureedge.net/1.0.82/survey.vue.min.js"></script>--}}
 </body>
 </html>
