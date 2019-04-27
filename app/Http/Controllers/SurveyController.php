@@ -39,6 +39,12 @@ class SurveyController extends Controller
 //        return new SurveyCollection($user);
     }
 
+    public function getAnswerResult($id){
+        $user = Survey::where('survey_id', $id)->first() ;
+        return response()->json($user);
+//        return new SurveyCollection($user);
+    }
+
     public function update($id, Request $request){
         $survey = Survey::where('survey_id', $id)->firstOrFail();
         $survey->json = $request->json;

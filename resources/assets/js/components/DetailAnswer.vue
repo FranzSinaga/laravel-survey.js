@@ -19,7 +19,7 @@
                             <td>{{ answers.id }}</td>
                             <td>{{answers.created_at}}</td>
                             <td>
-                                <router-link :to="{name: 'showAnswer', params:{id: answers.id}}" class="btn btn-sm btn-secondary">Look Answer</router-link>
+                                <router-link :to="{name: 'showAnswer', params:{id: answers.survey_id, jbid: answers.id}}" class="btn btn-sm btn-secondary">Look Answer</router-link>
                             </td>
                         </tr>
                         </tbody>

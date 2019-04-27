@@ -31,4 +31,5 @@ Route::get('/survey', 'SurveyCreateController@index');
 Route::post('/survey/answer/{id}', 'AnswerController@save');
 Route::get('/survey/detail-answer/{id}', 'SurveyController@getAnswer');
 Route::get('/survey/show-answer/{id}', 'SurveyController@getAnswerById');
+Route::get('/survey/show-result/{id}/{jbid}', 'SurveyController@getAnswerResult');
 

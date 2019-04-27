@@ -51,11 +51,12 @@
                         }
                     });
 
-                    console.log(JSON.stringify(sender.data))
+                    // console.log(JSON.stringify(sender.data))
                     document
                         .querySelector('#surveyResult')
                         .innerHTML = "result: " + JSON.stringify(sender.data);
                 });
+                console.log(this.survey.getQuestionByName('question1').data)
             });
 
         },

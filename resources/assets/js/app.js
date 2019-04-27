@@ -41,7 +41,7 @@ const routes = [
     },
     {
         name: 'showAnswer',
-        path: '/survey/show-answer/:id',
+        path: '/survey/show-answer/:id/:jbid',
         component: ShowAnswer
     },
 ];

@@ -42,15 +42,15 @@
         created(){
             let uri = `http://localhost:8000/api/survey/create/${this.$route.params.id}`;
             this.axios.get(uri).then((response) => {
-                console.log(response.data.json)
+                // console.log(response.data.json)
                 this.post = response.data.json;
-                this.surveyCreator.text = this.post
+                this.surveyCreator.text = this.post;
             });
         },
         mounted() {
             // SurveyCreator.StylesManager.applyTheme("darkblue");
             let options = {
-                showPropertyGrid: false,
+                showPropertyGrid: true,
                 questionTypes: ["text", "checkbox", "radiogroup", "dropdown"],
             };
             this.surveyCreator = new SurveyCreator.SurveyCreator(
@@ -83,7 +83,6 @@
 
             },
             getDataSurvey(){
-                console.log(this.post)
                 alert(this.post)
             }
         }
